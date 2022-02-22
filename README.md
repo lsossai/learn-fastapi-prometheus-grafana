@@ -92,7 +92,7 @@ Podemos ver todos endpoints criados na docs criadas automaticamente pela FastAPI
 
 As métricas do Prometheus estão configuradas para serem coletadas no endpoint: http://127.0.0.1:8000/metrics
 
-É possível verificar a quantidade de requests por endpoint no Grafana na sessão `Explore` realizando a query na métrica starlette_requests_created.
+É possível verificar a quantidade de requests por endpoint no Grafana na sessão `Explore` realizando a query na métrica `starlette_requests_created`.
 
 ## Counter
 
