@@ -21,6 +21,7 @@ SIMPLE_COUNTER = Counter('simple_counter', 'A simple counter example')
 def counter_simple():
     SIMPLE_COUNTER.inc()
     print('Increasing SIMPLE_COUNTER by 1')
+    return 'Increasing SIMPLE_COUNTER by 1'
 
 
 LABELS = ['created_by', 'status']
@@ -31,11 +32,14 @@ COUNTER_WITH_LABELS = Counter('label_counter', 'A counter with labels', LABELS)
 
 @app.get('/counter/labels')
 def counter_labels():
+    created_by = rng.choice(CREATED_BY_VALUES)
+    status = rng.choice(STATUS_VALUES)
     COUNTER_WITH_LABELS.labels(
-        created_by=rng.choice(CREATED_BY_VALUES),
-        status=rng.choice(STATUS_VALUES),
+        created_by=created_by,
+        status=status,
     ).inc()
     print('Increasing COUNTER_WITH_LABELS by 1')
+    return f'Increasing COUNTER_WITH_LABELS {created_by} {status} by 1'
 
 
 SIMPLE_GAUGE = Gauge(
