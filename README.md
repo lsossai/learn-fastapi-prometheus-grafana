@@ -66,3 +66,34 @@ Clique em `Save & Test` para validar se o novo Data Source está funcionando.
 * Verifique se foi gerado um gráfico com dados de uso da CPU
 
 ## FastAPI
+### 1. Criando o ambiente e instalando os requisitos
+Primeiro vamos criar um ambiente virtual:
+
+> python3 -m venv. env
+
+Para entrar dentro do ambiente:
+
+> source .env/bin/activate
+
+E agora instalando os requisitos:
+
+> pip install -r requirements.txt
+
+
+### 2. Deploy na FastAPI
+Dentro do venv execute o seguinte comando:
+> uvicorn backend.main:app --reload
+
+Acesse http://127.0.0.1:8000 e verifique se recebe o seguinte output:
+
+`{"Hello":"World"}`
+# Inserindo métricas do Prometheus via FastAPI:
+Podemos ver todos endpoints criados na docs criadas automaticamente pela FastAPI no seguinte link: http://127.0.0.1:8000/docs
+
+## Counter
+
+## Gauge
+
+## Summary
+
+## Histogram
