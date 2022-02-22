@@ -1,3 +1,4 @@
 fastapi
 uvicorn
 starlette-prometheus-middleware
+prometheus_client
